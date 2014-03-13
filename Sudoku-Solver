@@ -1,0 +1,1 @@
+g++ init\ sudoku.cpp ausgeschlossen_r_s_b.cpp zwei_drei_in_einer_r_s.cpp check_einzige_Moeglichkeit.cpp main.cpp -o Anwendung; ./Anwendung; exit;
