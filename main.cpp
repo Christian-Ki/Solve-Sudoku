@@ -16,9 +16,8 @@
 #include "ausgeschlossen_r_s_b.h"
 #include "zwei_drei_in_einer_r_s.h"
 #include "check_einzige_Moeglichkeit.h"
+#include "Sudoku_ausgeben.h"
 
-int S_count();
-void S_print_out();
 
 int s[9][9];
 
@@ -85,28 +84,4 @@ int main() {
     
     std::cout << "Anzahl der belegten Felder: " << count << std::endl; //Die Zahl der belegten Felder wird ausgegeben
     
-}
-
-void S_print_out() {
-    //Sudoku ausgeben
-    int i, j;
-    for (i=0; i<=8; i++) {
-        for (j=0; j<=8; j++) {
-            std::cout << s[i][j] << " " << std::flush;
-        }
-        std::cout << "\n" << std::flush;
-    }
-}
-
-int S_count() {
-    //gibt die Anzahl aller nicht leeren Felder zurück
-    int i, j, count=0;
-    for (i=0; i<=8; i++) {
-        for (j=0; j<=8; j++) {
-            if (s[i][j]!=0){
-                count++;
-            }
-        }
-    }
-    return count;
 }
