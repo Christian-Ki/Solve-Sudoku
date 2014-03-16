@@ -1,5 +1,5 @@
 //
-//  Sudoku ckmh cpp.cpp
+//
 //  
 //
 //  Created by Christian Kisczio on 20.02.14.
@@ -21,9 +21,16 @@
 
 int s[9][9];
 
-int main() {
+int main(int argc, char *argv[]) {
+    if (argc > 1) {
+        int c_argument = atoi(argv[1]); //atoi könnte man noch selber schreiben; so erstmal als workaround
+        init_sudoku(c_argument);
+    }
+    else {
+        std::cout << "Bitte Sudoku so auswählen: " << argv[0] << " [Nummer Sudoku]\n";
+        exit(1);
+    }
     
-    init_sudoku();
     S_print_out(); //Das Sudoku wird einmal augegeben
     std::cout << "\n";
     int count = S_count();//Die Anzahl der belegten Felder wird gespreichert
